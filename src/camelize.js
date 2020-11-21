@@ -1,5 +1,8 @@
 export function hyphenToCamel(name) {
-  return name.replace(/-([a-z])/g, g => g[1].toUpperCase());
+  if (!name) {
+    return name;
+  }
+  return name.replace(/-([a-z])/g, (g) => g[1].toUpperCase());
 }
 
 export function namespaceToCamel(namespace, name) {
